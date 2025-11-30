@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Details for {{ symbol }}</h1>
+
+<table border="1" cellpadding="4" cellspacing="0">
+    <tr>
+        <th>Date</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Close</th>
+        <th>Volume</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+        <td>{{ row.date }}</td>
+        <td>{{ row.open }}</td>
+        <td>{{ row.high }}</td>
+        <td>{{ row.low }}</td>
+        <td>{{ row.close }}</td>
+        <td>{{ row.volume }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

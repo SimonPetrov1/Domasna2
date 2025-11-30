@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Coins (from all_coins.csv)</h1>
+<ul>
+    {% for s in symbols %}
+        <li><a href="{{ url_for('coin_detail', symbol=s) }}">{{ s }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
